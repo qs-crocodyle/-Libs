@@ -1,0 +1,426 @@
+--[[
+	Name: Babble-ItemSet-2.2
+	Revision: $Rev: 1000 $
+	Author(s): Lichery
+	Description: A library to provide localizations for factions.
+	Dependencies: AceLibrary, AceLocale-2.2
+]]
+-- Проверить ЗГ, АК20, АК40, Т3, разобраться с сетами AB
+local MAJOR_VERSION = "Babble-ItemSet-2.2"
+local MINOR_VERSION = tonumber(string.sub("$Revision: 1000 $", 12, -3))
+
+if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
+
+if not AceLibrary:HasInstance("AceLocale-2.2") then error(MAJOR_VERSION .. " requires AceLocale-2.2") end
+
+local _, x = AceLibrary("AceLocale-2.2"):GetLibraryVersion()
+MINOR_VERSION = MINOR_VERSION * 100000 + x
+
+if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end
+
+local BabbleItemSet = AceLibrary("AceLocale-2.2"):new(MAJOR_VERSION)
+
+-- uncomment below for debug information
+-- BabbleItemSet:EnableDebugging()
+
+BabbleItemSet:RegisterTranslations("enUS", function()
+	return {
+	-- Blacksmithing Crafted Sets
+		["Bloodsoul Embrace"] = true,
+		["Imperial Plate"] = true,
+		["The Darksoul"] = true,
+    -- Tailoring Crafted Sets
+		["Bloodvine Garb"] = true,
+    -- Leatherworking Crafted Sets
+		["Black Dragon Mail"] = true,
+		["Blood Tiger Harness"] = true,
+		["Blue Dragon Mail"] = true,
+		["Devilsaur Armor"] = true,
+		["Green Dragon Mail"] = true,
+		["Ironfeather Armor"] = true,
+		["Primal Batskin"] = true,
+		["Stormshroud Armor"] = true,
+		["Volcanic Armor"] = true,
+    --Pre60 Sets
+		["Battlegear of Undead Slaying"] = true,
+		["Bloodmail Regalia"] = true,
+		["Cadaverous Garb"] = true,
+		["Chain of the Scarlet Crusade"] = true,
+		["Dal'Rend's Arms"] = true,
+		["Deathbone Guardian"] = true,
+		["Defias Leather"] = true,
+		["Embrace of the Viper"] = true,
+		["Garb of the Undead Slayer"] = true,
+		["Ironweave Battlesuit"] = true,
+		["Major Mojo Infusion"] = true,
+		["Necropile Raiment"] = true,
+		["Overlord's Resolution"] = true,
+		["Prayer of the Primal"] = true,
+		["Primal Blessing"] = true,
+		["Regalia of Undead Cleansing"] = true,
+		["Shard of the Gods"] = true,
+		["Spider's Kiss"] = true,
+		["Spirit of Eskhandar"] = true,
+		["The Gladiator"] = true,
+		["The Postmaster"] = true,
+		["The Twin Blades of Hakkari"] = true,
+		["Undead Slayer's Armor"] = true,
+		["Zanzil's Concentration"] = true,
+    --ZG Sets
+		["Augur's Regalia"] = true,
+		["Confessor's Raiment"] = true,
+		["Demoniac's Threads"] = true,
+		["Freethinker's Armor"] = true,
+		["Haruspex's Garb"] = true,
+		["Illusionist's Attire"] = true,
+		["Madcap's Outfit"] = true,
+		["Predator's Armor"] = true,
+		["Vindicator's Battlegear"] = true,
+    --AQ20 Sets
+		["Battlegear of Eternal Justice"] = true,
+		["Battlegear of Unyielding Strength"] = true,
+		["Emblems of Veiled Shadows"] = true,
+		["Finery of Infinite Wisdom"] = true,
+		["Gift of the Gathering Storm"] = true,
+		["Implements of Unspoken Names"] = true,
+		["Symbols of Unending Life"] = true,
+		["Trappings of the Unseen Path"] = true,
+		["Trappings of Vaulted Secrets"] = true,
+    --AQ40 Sets
+		["Avenger's Battlegear"] = true,
+		["Conqueror's Battlegear"] = true,
+		["Deathdealer's Embrace"] = true,
+		["Doomcaller's Attire"] = true,
+		["Enigma Vestments"] = true,
+		["Garments of the Oracle"] = true,
+		["Genesis Raiment"] = true,
+		["Stormcaller's Garb"] = true,
+		["Striker's Garb"] = true,
+    --T0 Sets
+		["Battlegear of Valor"] = true,
+		["Beaststalker Armor"] = true,
+		["Dreadmist Raiment"] = true,
+		["Lightforge Armor"] = true,
+		["Magister's Regalia"] = true,
+		["Shadowcraft Armor"] = true,
+		["The Elements"] = true,
+		["Vestments of the Devout"] = true,
+		["Wildheart Raiment"] = true,
+    --T0.5 Sets
+		["Battlegear of Heroism"] = true,
+		["Beastmaster Armor"] = true,
+		["Darkmantle Armor"] = true,
+		["Deathmist Raiment"] = true,
+		["Feralheart Raiment"] = true,
+		["Sorcerer's Regalia"] = true,
+		["Soulforge Armor"] = true,
+		["The Five Thunders"] = true,
+		["Vestments of the Virtuous"] = true,
+    --T1 Sets
+		["Arcanist Regalia"] = true,
+		["Battlegear of Might"] = true,
+		["Cenarion Raiment"] = true,
+		["Felheart Raiment"] = true,
+		["Giantstalker Armor"] = true,
+		["Lawbringer Armor"] = true,
+		["Nightslayer Armor"] = true,
+		["The Earthfury"] = true,
+		["Vestments of Prophecy"] = true,
+    --T2 Sets
+		["Battlegear of Wrath"] = true,
+		["Bloodfang Armor"] = true,
+		["Dragonstalker Armor"] = true,
+		["Judgement Armor"] = true,
+		["Nemesis Raiment"] = true,
+		["Netherwind Regalia"] = true,
+		["Stormrage Raiment"] = true,
+		["The Ten Storms"] = true,
+		["Vestments of Transcendence"] = true,
+    --T3 Sets
+		["Bonescythe Armor"] = true,
+		["Cryptstalker Armor"] = true,
+		["Dreamwalker Raiment"] = true,
+		["Frostfire Regalia"] = true,
+		["Plagueheart Raiment"] = true,
+		["Redemption Armor"] = true,
+		["The Earthshatterer"] = true,
+		["Vestments of Faith"] = true,
+		["Dreadnaught's Battlegear"] = true,
+	--PvP Epic Horde Sets
+		["Warlord's Battlegear"] = true,
+		["Warlord's Earthshaker"] = true,
+		["Warlord's Pursuit"] = true,
+		["Warlord's Raiment"] = true,
+		["Warlord's Regalia"] = true,
+		["Warlord's Sanctuary"] = true,
+		["Warlord's Threads"] = true,
+		["Warlord's Vestments"] = true,
+    --PvP Epic Alliance Sets		
+		["Field Marshal's Aegis"] = true,
+		["Field Marshal's Battlegear"] = true,
+		["Field Marshal's Pursuit"] = true,
+		["Field Marshal's Raiment"] = true,
+		["Field Marshal's Regalia"] = true,
+		["Field Marshal's Sanctuary"] = true,
+		["Field Marshal's Threads"] = true,
+		["Field Marshal's Vestments"] = true,
+    --PvP Rare Horde Sets
+		["Champion's Refuge"] = true,
+		["Champion's Pursuance"] = true,
+		["Champion's Arcanum"] = true,
+		["Champion's Investiture"] = true,
+		["Champion's Guard"] = true,
+		["Champion's Stormcaller"] = true,
+		["Champion's Dreadgear"] = true,
+		["Champion's Battlearmor"] = true,
+    --PvP Rare Alliance Sets	
+		["Lieutenant Commander's Refuge"] = true,
+		["Lieutenant Commander's Pursuance"] = true,
+		["Lieutenant Commander's Arcanum"] = true,
+		["Lieutenant Commander's Redoubt"] = true,
+		["Lieutenant Commander's Investiture"] = true,
+		["Lieutenant Commander's Guard"] = true,
+		["Lieutenant Commander's Dreadgear"] = true,
+		["Lieutenant Commander's Battlearmor"] = true,
+	--AB Rare Horde Sets
+		["The Defiler's Determination"] = true,
+		["The Defiler's Fortitude"] = true,
+		["The Defiler's Intent"] = true,
+		["The Defiler's Purpose"] = true,
+		["The Defiler's Resolution"] = true,
+		["The Defiler's Will"] = true,
+	--AB Rare Alliance Sets
+		["The Highlander's Determination"] = true,
+		["The Highlander's Fortitude"] = true,
+		["The Highlander's Intent"] = true,
+		["The Highlander's Purpose"] = true,
+		["The Highlander's Resolution"] = true,
+		["The Highlander's Resolve"] = true,
+		["The Highlander's Will"] = true,
+		
+		["Twilight Trappings"] = true,
+		
+		
+		["Lieutenant Commander's Aegis"] = true,
+		["Lieutenant Commander's Battlegear"] = true,
+		["Lieutenant Commander's Pursuit"] = true,
+		["Lieutenant Commander's Raiment"] = true,
+		["Lieutenant Commander's Regalia"] = true,
+		["Lieutenant Commander's Sanctuary"] = true,
+		["Lieutenant Commander's Threads"] = true,
+		["Lieutenant Commander's Vestments"] = true,	
+		
+		["Champion's Battlegear"] = true,
+		["Champion's Earthshaker"] = true,
+		["Champion's Pursuit"] = true,
+		["Champion's Raiment"] = true,
+		["Champion's Regalia"] = true,
+		["Champion's Sanctuary"] = true,
+		["Champion's Threads"] = true,
+		["Champion's Vestments"] = true,
+	}
+end)
+
+BabbleItemSet:RegisterTranslations("zhCN", function()
+	return {
+	-- Blacksmithing Crafted Sets
+		["Bloodsoul Embrace"] = "血魂的拥抱",
+		["Imperial Plate"] = "君王板甲",
+		["The Darksoul"] = "黑暗之魂",
+    -- Tailoring Crafted Sets
+		["Bloodvine Garb"] = "血藤",
+    -- Leatherworking Crafted Sets
+		["Black Dragon Mail"] = "黑龙锁甲",
+		["Blood Tiger Harness"] = "血虎",
+		["Blue Dragon Mail"] = "蓝龙锁甲",
+		["Devilsaur Armor"] = "魔暴龙护甲",
+		["Green Dragon Mail"] = "绿龙锁甲",
+		["Ironfeather Armor"] = "铁羽护甲",
+		["Primal Batskin"] = "原始蝙蝠皮套装",
+		["Stormshroud Armor"] = "雷暴",
+		["Volcanic Armor"] = "火山",
+    --Pre60 Sets
+		["Battlegear of Undead Slaying"] = "亡灵毁灭者",
+		["Bloodmail Regalia"] = "血链",
+		["Cadaverous Garb"] = "苍白",
+		["Chain of the Scarlet Crusade"] = "血色十字军链甲",
+		["Dal'Rend's Arms"] = "雷德双刀",
+		["Deathbone Guardian"] = "亡者之骨",
+		["Defias Leather"] = "迪菲亚皮甲",
+		["Embrace of the Viper"] = "毒蛇的拥抱",
+		["Garb of the Undead Slayer"] = "亡灵屠戮者的装备",
+		["Ironweave Battlesuit"] = "铁纹作战套装",
+		["Major Mojo Infusion"] = "极效魔精套装",
+		["Necropile Raiment"] = "骨堆",
+		["Overlord's Resolution"] = "督军的决心",
+		["Prayer of the Primal"] = "远古祷言",
+		["Primal Blessing"] = "原始祝福",
+		["Regalia of Undead Cleansing"] = "亡灵净化者",
+		["Shard of the Gods"] = "天神碎片",
+		["Spider's Kiss"] = "蜘蛛之吻",
+		["Spirit of Eskhandar"] = "艾斯卡达尔之魂",
+		["The Gladiator"] = "角斗士",
+		["The Postmaster"] = "邮差",
+		["The Twin Blades of Hakkari"] = "哈卡莱双刃",
+		["Undead Slayer's Armor"] = "亡灵屠戮者的护甲",
+		["Zanzil's Concentration"] = "赞吉尔的专注",
+    --ZG Sets
+		["Augur's Regalia"] = "预言者套装",
+		["Confessor's Raiment"] = "忏悔者衣饰",
+		["Demoniac's Threads"] = "恶魔师护甲",
+		["Freethinker's Armor"] = "思考者护甲",
+		["Haruspex's Garb"] = "占卜师套装",
+		["Illusionist's Attire"] = "幻术师套装",
+		["Madcap's Outfit"] = "狂妄者套装",
+		["Predator's Armor"] = "捕猎者套装",
+		["Vindicator's Battlegear"] = "辩护者重甲",
+    --AQ20 Sets
+		["Battlegear of Eternal Justice"] = "永恒的公正",
+		["Battlegear of Unyielding Strength"] = "坚定的力量",
+		["Emblems of Veiled Shadows"] = "笼罩的阴影",
+		["Finery of Infinite Wisdom"] = "无尽的智慧",
+		["Gift of the Gathering Storm"] = "聚集的风暴",
+		["Implements of Unspoken Names"] = "禁断的邪语",
+		["Symbols of Unending Life"] = "不灭的生命",
+		["Trappings of the Unseen Path"] = "隐秘的通途",
+		["Trappings of Vaulted Secrets"] = "魔法的秘密",
+    --AQ40 Sets
+		["Avenger's Battlegear"] = "复仇者",
+		["Conqueror's Battlegear"] = "征服者",
+		["Deathdealer's Embrace"] = "死亡执行者的拥抱",
+		["Doomcaller's Attire"] = "厄运召唤者",
+		["Enigma Vestments"] = "神秘套装",
+		["Garments of the Oracle"] = "神谕者",
+		["Genesis Raiment"] = "起源套装",
+		["Stormcaller's Garb"] = "风暴召唤者",
+		["Striker's Garb"] = "攻击者",
+    --T0 Sets
+		["Battlegear of Valor"] = "勇气",
+		["Beaststalker Armor"] = "野兽追猎者",
+		["Dreadmist Raiment"] = "鬼雾",
+		["Lightforge Armor"] = "光铸护甲",
+		["Magister's Regalia"] = "博学者的徽记",
+		["Shadowcraft Armor"] = "迅影",
+		["The Elements"] = "元素",
+		["Vestments of the Devout"] = "虔诚",
+		["Wildheart Raiment"] = "野性之心",
+    --T0.5 Sets
+		["Battlegear of Heroism"] = "英勇",
+		["Beastmaster Armor"] = "兽王",
+		["Darkmantle Armor"] = "暗幕",
+		["Deathmist Raiment"] = "死雾",
+		["Feralheart Raiment"] = "狂野之心",
+		["Sorcerer's Regalia"] = "巫师",
+		["Soulforge Armor"] = "魂铸",
+		["The Five Thunders"] = "五雷",
+		["Vestments of the Virtuous"] = "坚贞",
+    --T1 Sets
+		["Arcanist Regalia"] = "奥术师",
+		["Battlegear of Might"] = "力量",
+		["Cenarion Raiment"] = "塞纳里奥",
+		["Felheart Raiment"] = "恶魔之心",
+		["Giantstalker Armor"] = "巨人追猎者",
+		["Lawbringer Armor"] = "秩序之源",
+		["Nightslayer Armor"] = "夜幕杀手",
+		["The Earthfury"] = "大地之怒",
+		["Vestments of Prophecy"] = "预言",
+    --T2 Sets
+		["Battlegear of Wrath"] = "愤怒",
+		["Bloodfang Armor"] = "血牙",
+		["Dragonstalker Armor"] = "巨龙追猎者",
+		["Judgement Armor"] = "审判",
+		["Nemesis Raiment"] = "复仇",
+		["Netherwind Regalia"] = "灵风",
+		["Stormrage Raiment"] = "怒风",
+		["The Ten Storms"] = "无尽风暴",
+		["Vestments of Transcendence"] = "卓越",
+    --T3 Sets
+		["Bonescythe Armor"] = "骨镰",
+		["Cryptstalker Armor"] = "地穴追猎者",
+		["Dreamwalker Raiment"] = "梦游者",
+		["Frostfire Regalia"] = "霜火",
+		["Plagueheart Raiment"] = "瘟疫之心",
+		["Redemption Armor"] = "救赎",
+		["The Earthshatterer"] = "碎地者",
+		["Vestments of Faith"] = "信仰",
+		["Dreadnaught's Battlegear"] = "无畏",
+	--PvP Epic Horde Sets
+		["Warlord's Battlegear"] = "督军的战甲",
+		["Warlord's Earthshaker"] = "督军的震撼",
+		["Warlord's Pursuit"] = "督军的猎装",
+		["Warlord's Raiment"] = "督军的神服",
+		["Warlord's Regalia"] = "督军的法衣",
+		["Warlord's Sanctuary"] = "督军的圣装",
+		["Warlord's Threads"] = "督军的魔装",
+		["Warlord's Vestments"] = "督军的制服",
+    --PvP Epic Alliance Sets		
+		["Field Marshal's Aegis"] = "元帅的庇护",
+		["Field Marshal's Battlegear"] = "元帅的战甲",
+		["Field Marshal's Pursuit"] = "元帅的猎装",
+		["Field Marshal's Raiment"] = "元帅的神服",
+		["Field Marshal's Regalia"] = "元帅的法衣",
+		["Field Marshal's Sanctuary"] = "元帅的圣装",
+		["Field Marshal's Threads"] = "元帅的魔装",
+		["Field Marshal's Vestments"] = "元帅的制服",
+    --PvP Rare Horde Sets
+		["Champion's Refuge"] = "勇士的庇护",
+		["Champion's Pursuance"] = "勇士的职责",
+		["Champion's Arcanum"] = "勇士的秘密",
+		["Champion's Investiture"] = "勇士的授权",
+		["Champion's Guard"] = "勇士的套装",
+		["Champion's Stormcaller"] = "勇士的风暴",
+		["Champion's Dreadgear"] = "勇士的鬼纹",
+		["Champion's Battlearmor"] = "勇士的战铠",
+    --PvP Rare Alliance Sets	
+		["Lieutenant Commander's Refuge"] = "少校的庇护",
+		["Lieutenant Commander's Pursuance"] = "少校的职责",
+		["Lieutenant Commander's Arcanum"] = "少校的秘密",
+		["Lieutenant Commander's Redoubt"] = "少校的壁垒",
+		["Lieutenant Commander's Investiture"] = "少校的授权",
+		["Lieutenant Commander's Guard"] = "少校的护卫",
+		["Lieutenant Commander's Dreadgear"] = "少校的鬼纹",
+		["Lieutenant Commander's Battlearmor"] = "少校的战铠",
+	--AB Rare Horde Sets
+		["The Defiler's Determination"] = "污染者的果断",
+		["The Defiler's Fortitude"] = "污染者的坚韧",
+		["The Defiler's Intent"] = "污染者的专注",
+		["The Defiler's Purpose"] = "污染者的毅力",
+		["The Defiler's Resolution"] = "污染者的决心",
+		["The Defiler's Will"] = "污染者的意志",
+	--AB Rare Alliance Sets
+		["The Highlander's Determination"] = "高地人的果断",
+		["The Highlander's Fortitude"] = "高地人的坚韧",
+		["The Highlander's Intent"] = "高地人的专注",
+		["The Highlander's Purpose"] = "高地人的毅力",
+		["The Highlander's Resolution"] = "高地人的决心",
+		["The Highlander's Resolve"] = "高地人的执着",
+		["The Highlander's Will"] = "高地人的意志",
+		
+		["Twilight Trappings"] = "暮光套装",
+		
+		
+		["Lieutenant Commander's Aegis"] = "少校的庇护",
+		["Lieutenant Commander's Battlegear"] = "少校的战甲",
+		["Lieutenant Commander's Pursuit"] = "少校的猎装",
+		["Lieutenant Commander's Raiment"] = "少校的神服",
+		["Lieutenant Commander's Regalia"] = "少校的法衣",
+		["Lieutenant Commander's Sanctuary"] = "少校的圣装",
+		["Lieutenant Commander's Threads"] = "少校的魔装",
+		["Lieutenant Commander's Vestments"] = "少校的制服",	
+		
+		["Champion's Battlegear"] = "勇士的战甲",
+		["Champion's Earthshaker"] = "勇士的震撼",
+		["Champion's Pursuit"] = "勇士的猎装",
+		["Champion's Raiment"] = "勇士的神服",
+		["Champion's Regalia"] = "勇士的法衣",
+		["Champion's Sanctuary"] = "勇士的圣装",
+		["Champion's Threads"] = "勇士的魔装",
+		["Champion's Vestments"] = "勇士的制服",
+	}
+end)
+
+BabbleItemSet:Debug()
+BabbleItemSet:SetStrictness(true)
+
+AceLibrary:Register(BabbleItemSet, MAJOR_VERSION, MINOR_VERSION)
+BabbleItemSet = nil
